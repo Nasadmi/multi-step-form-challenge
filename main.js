@@ -10,7 +10,7 @@ const data = {
     info: {
         name: '',
         email: '',
-        phone: 0
+        phone: ''
     },
 }
 
@@ -44,7 +44,7 @@ class setData {
             }
         }
 
-        if (isNaN(phone)) {
+        if (isNaN(phone.split('+').join('').split(' ').join(''))) {
             return {
                 error: true
             }
@@ -52,7 +52,7 @@ class setData {
 
         data.info.name = name
         data.info.email = email
-        data.info.phone = parseInt(phone)
+        data.info.phone = phone
     }
 }
 
@@ -60,20 +60,27 @@ class setData {
 btn.forEach(element => {
     element.addEventListener('click', (e) => {
         setTimeout(() => {
-            let err = false;
+            let err;
 
             const idArticle = window.location.href.split('#')[1]
 
             const sets = new setData()
-            
+
+            console.log(e.target.getAttribute('data-type'))
+
             switch (e.target.getAttribute('data-type')) {
                 case 'info':
                     const info = sets.info()
-                    err = info.error
+                    err = info === undefined ? false : info.error
+                
+                case null:
+                    err = false
             }
 
+            
+
             if (err) {
-                console.log(err)
+                return
             }
 
             changeFocusedElement(idArticle)
