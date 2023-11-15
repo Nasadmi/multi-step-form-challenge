@@ -44,21 +44,24 @@
     </nav>
     <section id="info" class="focus">
       Info
-      <a href="#plain" class="btn-change-section">Next</a>
+      <input type="text" id="name" name="name">
+      <input type="email" id="email" name="email">
+      <input type="text" id="phone" name="phone">
+      <a href="#plain" class="btn-change-section" data-type="info">Next</a>
     </section>
     <section id="plain">
       Plain
       <a href="#info" class="btn-change-section">Back</a>
-      <a href="#add-ons" class="btn-change-section">Next</a>
+      <a href="#add-ons" class="btn-change-section" data-type="plain">Next</a>
     </section>
     <section id="add-ons">
       Add-Ons
       <a href="#plain" class="btn-change-section">Back</a>
-      <a href="#summary" class="btn-change-section">Next</a>
+      <a href="#summary" class="btn-change-section" data-type="summary">Next</a>
     </section>
     <section id="summary">
       Summary
-      <a href="#add-ons" class="btn-change-section">Back</a>
+      <a href="#add-ons" class="btn-change-section" data-type="add-ons">Back</a>
     </section>
   </main>
   <div class="attribution">

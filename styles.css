@@ -56,14 +56,15 @@ ul {
 /* CONTENT */
 
 .content {
-    width: 60%;
-    margin: 50px auto;
+    width: 50%;
+    margin: 150px auto 10px;
     background-color: #000;
-    min-height: 500px;
+    min-height: 550px;
     border-radius: 12px;
     background-color: var(--white);
     padding: 10px;
     display: flex;
+    gap: 70px;
 }
 
 /* SIDEBAR */
@@ -123,6 +124,7 @@ ul {
 
 .content section {
     display: none;
+    margin-top: 40px;
 }
 
 .content section.focus {
