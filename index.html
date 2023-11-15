@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Multi-step form</title>
+</head>
+<body>
+  <main class="content">
+    <!-- SIDEBAR -->
+    <nav class="sidebar">
+      <ul class="sidebar-menu">
+        <li>
+          <span class="circle-step-id focus" data-id="info">1</span>
+          <div class="step-text">
+            <h5>Step 1</h5>
+            <h4>Your Info</h4>
+          </div>
+        </li>
+        <li>
+          <span class="circle-step-id" data-id="plain">2</span>
+          <div class="step-text">
+            <h5>Step 2</h5>
+            <h4>Select Plain</h4>
+          </div>
+        </li>
+        <li>
+          <span class="circle-step-id" data-id="add-ons">3</span>
+          <div class="step-text">
+            <h5>Step 3</h5>
+            <h4>Add-Ons</h4>
+          </div>
+        </li>
+        <li>
+          <span class="circle-step-id" data-id="summary">4</span>
+          <div class="step-text">
+            <h5>Step 4</h5>
+            <h4>Summary</h4>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <section id="info" class="focus">
+      Info
+      <a href="#plain" class="btn-change-section">Next</a>
+    </section>
+    <section id="plain">
+      Plain
+      <a href="#info" class="btn-change-section">Back</a>
+      <a href="#add-ons" class="btn-change-section">Next</a>
+    </section>
+    <section id="add-ons">
+      Add-Ons
+      <a href="#plain" class="btn-change-section">Back</a>
+      <a href="#summary" class="btn-change-section">Next</a>
+    </section>
+    <section id="summary">
+      Summary
+      <a href="#add-ons" class="btn-change-section">Back</a>
+    </section>
+  </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Nasadmi/">Nasadmi</a>.
+  </div>
+  <script src="./main.js"></script>
+</body>
+</html>
