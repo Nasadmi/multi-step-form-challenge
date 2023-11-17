@@ -53,11 +53,16 @@ ul {
     color: hsl(228, 45%, 44%); 
 }
 
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+    -webkit-text-fill-color: var(--marine-blue);
+}
+
 /* CONTENT */
 
 .content {
-    width: 50%;
-    margin: 150px auto 10px;
+    width: 70%;
+    margin: 50px auto 10px;
     background-color: #000;
     min-height: 550px;
     border-radius: 12px;
@@ -125,18 +130,45 @@ ul {
 .content section {
     display: none;
     margin-top: 40px;
+    position: relative;
+    width: 490px;
 }
 
 .content section.focus {
     display: block;
 }
 
-/* PERSONAL INFO STEP */
-
-.content section#info {
-    display: flex;
-    flex-direction: column;
+.content section .buttons a {    
+    top: 85%;
 }
+
+.content section .buttons .btn-change-section.next {
+    padding: 13px 25px;
+    border-radius: 12px;
+    background-color: var(--marine-blue);
+    color: var(--white);
+    transition: all 250ms ease-in-out;
+    position: absolute;
+    left: 85%;
+}
+
+.content section .buttons .btn-change-section.next:hover {
+    background-color: var(--purplish-blue);
+}
+
+.content section .buttons .btn-change-section.back {
+    color: var(--cool-gray);
+    transition: all 250ms ease-in-out;
+    top: 89%;
+    left: 5%;
+    position: absolute;
+}
+
+.content section .buttons .btn-change-section.back:hover {
+    color: var(--marine-blue);
+}
+
+/* PERSONAL INFO STEP */
 
 .content section#info h2 {
     color: var(--marine-blue);
@@ -154,4 +186,22 @@ ul {
     margin-bottom: 5px;
     font-weight: 400;
     color: var(--marine-blue);
+}
+
+.content section#info label input {
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: .5px solid var(--cool-gray);
+    width: 450px;
+    appearance: none;
+    outline: none;
+    transition: all 250ms ease;
+    font-weight: 500;
+    color: var(--marine-blue);
+}
+
+.content section#info label input:focus {
+    border: .5px solid var(--purplish-blue);
 }

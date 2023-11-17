@@ -32,7 +32,8 @@ class setData {
         const email = document.querySelector('input#email').value
         const phone = document.querySelector('input#phone').value
 
-        if (name === undefined || email === undefined || phone === undefined) {
+        if (name === '' || email === '' || phone === '') {
+            console.log('error')
             return {
                 error: true
             }
@@ -53,9 +54,14 @@ class setData {
         data.info.name = name
         data.info.email = email
         data.info.phone = phone
+
+        return {
+            error: false
+        }
     }
 }
 
+const sets = new setData()
 
 btn.forEach(element => {
     element.addEventListener('click', (e) => {
@@ -64,20 +70,16 @@ btn.forEach(element => {
 
             const idArticle = window.location.href.split('#')[1]
 
-            const sets = new setData()
-
-            console.log(e.target.getAttribute('data-type'))
-
             switch (e.target.getAttribute('data-type')) {
                 case 'info':
                     const info = sets.info()
-                    err = info === undefined ? false : info.error
+                    err = info.error
+                break;
                 
                 case null:
                     err = false
+                break;
             }
-
-            
 
             if (err) {
                 return
@@ -89,8 +91,12 @@ btn.forEach(element => {
                 if (idArticle === undefined) {
                     return
                 }
+
+                section.classList.add('unfocus')
                 section.classList.remove('focus')
+
                 if (idArticle === section.getAttribute('id')) {
+                    section.classList.remove('unfocus')
                     section.classList.add('focus')
                 }
             })
