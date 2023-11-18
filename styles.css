@@ -1,207 +1,340 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
 
 *,
 *::before,
 *::after {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    /* Primary Colors */
-    --marine-blue: hsl(213, 96%, 18%);
-    --purplish-blue: hsl(243, 100%, 62%);
-    --pastel-blue: hsl(228, 100%, 84%);
-    --light-blue: hsl(206, 94%, 87%);
-    --strawberry-red: hsl(354, 84%, 57%);
-    /* Neutral Colors */
-    --cool-gray: hsl(231, 11%, 63%);
-    --light-gray: hsl(229, 24%, 87%);
-    --magnolia: hsl(217, 100%, 97%);
-    --alabaster: hsl(231, 100%, 99%);
-    --white: hsl(0, 0%, 100%);
+  /* Primary Colors */
+  --marine-blue: hsl(213, 96%, 18%);
+  --purplish-blue: hsl(243, 100%, 62%);
+  --pastel-blue: hsl(228, 100%, 84%);
+  --light-blue: hsl(206, 94%, 87%);
+  --strawberry-red: hsl(354, 84%, 57%);
+  /* Neutral Colors */
+  --cool-gray: hsl(231, 11%, 63%);
+  --light-gray: hsl(229, 24%, 87%);
+  --magnolia: hsl(217, 100%, 97%);
+  --alabaster: hsl(231, 100%, 99%);
+  --white: hsl(0, 0%, 100%);
 }
-
 
 html,
 body {
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
-    font-size: 16px;
-    font-family: 'Ubuntu';
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--magnolia);
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-size: 16px;
+  font-family: "Ubuntu";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--magnolia);
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
-.attribution { 
-    font-size: 11px; text-align: center;
+.attribution {
+  font-size: 11px;
+  text-align: center;
 }
 
-.attribution a { 
-    color: hsl(228, 45%, 44%); 
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
 
 input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px white inset;
-    -webkit-text-fill-color: var(--marine-blue);
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  -webkit-text-fill-color: var(--marine-blue);
+}
+
+span.error {
+    color: var(--strawberry-red);
+    font-weight: 500;
+    font-size: 14px;
 }
 
 /* CONTENT */
 
 .content {
-    width: 70%;
-    margin: 50px auto 10px;
-    background-color: #000;
-    min-height: 550px;
-    border-radius: 12px;
-    background-color: var(--white);
-    padding: 10px;
-    display: flex;
-    gap: 70px;
+  width: 70%;
+  margin: 50px auto 10px;
+  background-color: #000;
+  min-height: 550px;
+  border-radius: 12px;
+  background-color: var(--white);
+  padding: 10px;
+  display: flex;
+  gap: 70px;
 }
 
 /* SIDEBAR */
 
 .content .sidebar {
-    background-image: url('./assets/images/bg-sidebar-desktop.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 30%;
-    height: 100%;
-    border-radius: 12px;
-    padding: 10px;
+  background-image: url("./assets/images/bg-sidebar-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 30%;
+  height: 100%;
+  border-radius: 12px;
+  padding: 10px;
 }
 
 .content .sidebar .sidebar-menu li {
-    margin: 35px 0;
-    display: flex;
-    gap: 10px;
+  margin: 35px 0;
+  display: flex;
+  gap: 10px;
 }
 
 .content .sidebar .sidebar-menu li .circle-step-id {
-    padding: 6px 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    border-radius: 22px;
-    border: 1px solid var(--alabaster);
-    color: var(--alabaster);
-    max-height: 34px;
-    font-weight: 700;
-    transition: all 250ms ease-in-out;
+  padding: 6px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 22px;
+  border: 1px solid var(--alabaster);
+  color: var(--alabaster);
+  max-height: 34px;
+  font-weight: 700;
+  transition: all 250ms ease-in-out;
 }
 
 .content .sidebar .sidebar-menu li .circle-step-id.focus {
-    background-color: var(--light-blue);
-    color: var(--marine-blue);
+  background-color: var(--light-blue);
+  color: var(--marine-blue);
 }
 
 .content .sidebar .sidebar-menu li .step-text {
-    letter-spacing: 0.8px;
-    text-transform: uppercase;
-    color: var(--alabaster);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--alabaster);
 }
 
 .content .sidebar .sidebar-menu li .step-text h5 {
-    font-weight: 400;
-    font-size: 12px;
-    color: var(--pastel-blue);
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--pastel-blue);
 }
 
 .content .sidebar .sidebar-menu li .step-text h4 {
-    font-size: 13px;
+  font-size: 13px;
 }
 
 /* SECTIONS */
 
 .content section {
-    display: none;
-    margin-top: 40px;
-    position: relative;
-    width: 490px;
+  display: none;
+  margin-top: 40px;
+  position: relative;
+  width: 490px;
 }
 
 .content section.focus {
-    display: block;
+  display: block;
 }
 
-.content section .buttons a {    
-    top: 85%;
+.content section .buttons a {
+  top: 85%;
 }
 
 .content section .buttons .btn-change-section.next {
-    padding: 13px 25px;
-    border-radius: 12px;
-    background-color: var(--marine-blue);
-    color: var(--white);
-    transition: all 250ms ease-in-out;
-    position: absolute;
-    left: 85%;
+  padding: 13px 25px;
+  border-radius: 12px;
+  background-color: var(--marine-blue);
+  color: var(--white);
+  transition: all 250ms ease-in-out;
+  position: absolute;
+  left: 85%;
 }
 
 .content section .buttons .btn-change-section.next:hover {
-    background-color: var(--purplish-blue);
+  background-color: var(--purplish-blue);
 }
 
 .content section .buttons .btn-change-section.back {
-    color: var(--cool-gray);
-    transition: all 250ms ease-in-out;
-    top: 89%;
-    left: 5%;
-    position: absolute;
+  color: var(--cool-gray);
+  transition: all 250ms ease-in-out;
+  top: 89%;
+  left: 5%;
+  position: absolute;
 }
 
 .content section .buttons .btn-change-section.back:hover {
-    color: var(--marine-blue);
+  color: var(--marine-blue);
+}
+
+.content section h2 {
+  color: var(--marine-blue);
+  font-size: 30px;
+}
+
+.content section p {
+  color: var(--cool-gray);
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 /* PERSONAL INFO STEP */
 
-.content section#info h2 {
-    color: var(--marine-blue);
-    font-size: 40px;
-}
-
-.content section#info p {
-    color: var(--cool-gray);
-    margin-top: 10px;
-    margin-bottom: 20px;
-}
-
 .content section#info label h4 {
-    margin-top: 15px;
-    margin-bottom: 5px;
-    font-weight: 400;
-    color: var(--marine-blue);
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: 400;
+  color: var(--marine-blue);
+  display: flex;
+  justify-content: space-between;
 }
 
 .content section#info label input {
-    font-size: 16px;
-    font-family: 'Ubuntu', sans-serif;
-    padding: 10px 15px;
-    border-radius: 6px;
-    border: .5px solid var(--cool-gray);
-    width: 450px;
-    appearance: none;
-    outline: none;
-    transition: all 250ms ease;
-    font-weight: 500;
-    color: var(--marine-blue);
+  font-size: 16px;
+  font-family: "Ubuntu", sans-serif;
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: 0.5px solid var(--cool-gray);
+  width: 450px;
+  appearance: none;
+  outline: none;
+  transition: all 250ms ease;
+  font-weight: 500;
+  color: var(--marine-blue);
 }
 
 .content section#info label input:focus {
-    border: .5px solid var(--purplish-blue);
+  border: 0.5px solid var(--purplish-blue);
+}
+
+/* PLAIN STEP */
+
+.content section#plain span.error {
+    display: none;
+}
+
+.content section#plain span.error.show {
+    display: block;
+}
+
+.content section#plain .options {
+  display: flex;
+  gap: 10px;
+  width: 90%;
+  margin: 10px auto 0;
+}
+
+.content section#plain .options .option {
+  border-radius: 12px;
+  padding: 10px;
+  border: 0.5px solid var(--cool-gray);
+  width: 130px;
+  cursor: pointer;
+  transition: all 500ms ease;
+}
+
+.content section#plain .options .option:hover {
+    border: 0.5px solid var(--purplish-blue);
+}
+
+.content section#plain .options .option.selected {
+    background-color: var(--magnolia);
+    border: 0.5px solid var(--purplish-blue);
+}
+
+.content section#plain .options .option h4 {
+  margin-top: 60px;
+  color: var(--marine-blue);
+  margin-bottom: 5px;
+}
+
+.content section#plain .options .option .price {
+  color: var(--cool-gray);
+  font-size: 14px;
+}
+
+.content section#plain .options .option span.text-yearly {
+  color: var(--marine-blue);
+  font-size: 14px;
+  display: none;
+  margin-top: 5px;
+}
+
+.content section#plain .options .option span.text-yearly.show {
+    display: block;
+}
+
+.content section#plain .flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    background-color: var(--magnolia);
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.content section#plain .flex .text {
+    color: var(--marine-blue);
+    font-weight: 500;
+}
+
+.content section#plain .flex .switch {
+  position: relative;
+  display: inline-block;
+  width: 90px;
+  height: 20px;
+}
+
+.content section#plain .flex .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.content section#plain .flex .switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--marine-blue);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  width: 50%;
+  margin: auto;
+}
+
+.content section#plain .flex .switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.content section#plain .flex .switch input:checked + .slider:before {
+  -webkit-transform: translateX(30px);
+  -ms-transform: translateX(30px);
+  transform: translateX(20px);
+}
+
+.content section#plain .flex .switch .slider.round {
+  border-radius: 34px;
+}
+
+.content section#plain .flex .switch .slider.round:before {
+  border-radius: 50%;
 }
