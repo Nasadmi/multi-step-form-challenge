@@ -137,7 +137,7 @@ class setData {
             }
         }
 
-        document.querySelector('article.options').parentElement.children[2].classList.add('show')
+        document.querySelector('article.options').parentElement.children[2].classList.remove('show')
         data.plain.selection = selectedElement.getAttribute('id')
         data.plain.type = check.checked ? 'yearly' : 'monthly'
 
