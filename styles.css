@@ -59,9 +59,9 @@ input:-webkit-autofill {
 }
 
 span.error {
-    color: var(--strawberry-red);
-    font-weight: 500;
-    font-size: 14px;
+  color: var(--strawberry-red);
+  font-weight: 500;
+  font-size: 14px;
 }
 
 /* CONTENT */
@@ -174,12 +174,12 @@ span.error {
   color: var(--marine-blue);
 }
 
-.content section h2 {
+.content section > h2 {
   color: var(--marine-blue);
   font-size: 30px;
 }
 
-.content section p {
+.content section > p {
   color: var(--cool-gray);
   margin-top: 10px;
   margin-bottom: 20px;
@@ -217,11 +217,11 @@ span.error {
 /* PLAIN STEP */
 
 .content section#plain span.error {
-    display: none;
+  display: none;
 }
 
 .content section#plain span.error.show {
-    display: block;
+  display: block;
 }
 
 .content section#plain .options {
@@ -241,12 +241,12 @@ span.error {
 }
 
 .content section#plain .options .option:hover {
-    border: 0.5px solid var(--purplish-blue);
+  border: 0.5px solid var(--purplish-blue);
 }
 
 .content section#plain .options .option.selected {
-    background-color: var(--magnolia);
-    border: 0.5px solid var(--purplish-blue);
+  background-color: var(--magnolia);
+  border: 0.5px solid var(--purplish-blue);
 }
 
 .content section#plain .options .option h4 {
@@ -268,22 +268,22 @@ span.error {
 }
 
 .content section#plain .options .option span.text-yearly.show {
-    display: block;
+  display: block;
 }
 
 .content section#plain .flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    background-color: var(--magnolia);
-    padding: 15px;
-    border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  background-color: var(--magnolia);
+  padding: 15px;
+  border-radius: 12px;
 }
 
 .content section#plain .flex .text {
-    color: var(--marine-blue);
-    font-weight: 500;
+  color: var(--marine-blue);
+  font-weight: 500;
 }
 
 .content section#plain .flex .switch {
@@ -337,4 +337,75 @@ span.error {
 
 .content section#plain .flex .switch .slider.round:before {
   border-radius: 50%;
+}
+
+
+/* ADD-ONS STEP */
+
+.content section#add-ons .add-on {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+  padding: 10px;
+  border: 0.5px solid var(--purplish-blue);
+  border-radius: 6px;
+  transition: all 250ms ease-in-out;
+}
+
+.content section#add-ons .add-on.selected {
+  background-color: var(--light-blue);
+}
+
+.content section#add-ons .add-on .check-add-on {
+  display: flex;
+  align-items: center;
+  padding: 4px 3px;
+  border-radius: 5px;
+  border: 0.5px solid var(--cool-gray);
+  transition: all 250ms ease-in-out;
+}
+
+.content section#add-ons .add-on .check-add-on.checked {
+  background-color: var(--purplish-blue);
+  border: 0.5px solid transparent;
+}
+
+.content section#add-ons .add-on .content-add-on {
+  flex: 4;
+  margin-left: 20px;
+  line-height: 16px;
+}
+
+.content section#add-ons .add-on .content-add-on h4 {
+  color: var(--marine-blue);
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.content section#add-ons .add-on .content-add-on p {
+  color: var(--cool-gray);
+  font-size: 12px;
+}
+
+.content section#add-ons .add-on .price-add-on {
+  font-size: 14px;
+  color: var(--purplish-blue);
+}
+
+/* SUMMARY STEP */
+
+.content section#summary .summary-prices {
+  width: 90%;
+  margin: auto;
+}
+
+.content section#summary .summary-prices .index-prices {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content section#summary .summary-prices .index-prices .text h4 {
+  text-transform: capitalize;
 }

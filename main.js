@@ -8,6 +8,17 @@ const option = document.querySelectorAll('div.option')
 
 const check = document.querySelector('input#time-plain')
 
+const priceAddon = document.querySelectorAll('span.price-add-on')
+
+const basicPricesAddons = [1, 2, 2] 
+
+const addOn = document.querySelectorAll('article.add-on')
+
+const summaryElementsSetData = {
+    title: document.querySelector('h4.selection-plain'),
+    selectionPrice: document.querySelector('section#summary span.price')
+}
+
 const regexEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
 const data = {
@@ -20,7 +31,66 @@ const data = {
     plain: {
         selection: '',
         type: ''
+    },
+
+    addons: []
+}
+
+const changeFocusedElement = (target) => {
+    let focusedElement = document.querySelector('span.focus')
+    if (focusedElement) {
+        span.forEach(element => {
+            if (element.getAttribute('data-id') === target) {
+                element.classList.add('focus')
+            }
+        })
+        focusedElement.classList.remove('focus')
     }
+}
+
+const setDataAddons = (type) => {
+    let textType;
+    basicPricesAddons.forEach(price => {
+        if (priceAddon === null) {
+            return
+        }
+
+        if (type === 'yearly') {
+            textType = 'yr'
+        } else {
+            textType = 'mo'
+        }
+    
+        priceAddon[0].innerText = `+$${type === 'yearly' ? price * 10 : price}/${textType}`
+        priceAddon[1].innerText = `+$${type === 'yearly' ? price * 10 : price}/${textType}`
+        priceAddon[2].innerText = `+$${type === 'yearly' ? price * 10 : price}/${textType}`
+    })
+}
+
+const summarySetData = () => {
+    let selectionPrice;
+
+    const textTypeTime = data.plain.type === 'yearly' ? 'yr' : 'mo'
+
+    switch (data.plain.selection) {
+        case 'arcade':
+            selectionPrice = 9
+        break;
+
+        case 'advanced':
+            selectionPrice = 12
+        break;
+
+        case 'pro':
+            selectionPrice = 15
+        break;
+    }
+
+    summaryElementsSetData.title.innerText = `${data.plain.selection}(${data.plain.type})`
+    summaryElementsSetData.selectionPrice.innerText = 
+    `
+    $${data.plain.type === 'yearly' ? selectionPrice * 10 : selectionPrice}/${textTypeTime}
+    `
 }
 
 option.forEach(div => {
@@ -58,20 +128,14 @@ check.addEventListener('change', () => {
             element.classList.remove('show')
         })
     }
-    
 })
 
-const changeFocusedElement = (target) => {
-    let focusedElement = document.querySelector('span.focus')
-    if (focusedElement) {
-        span.forEach(element => {
-            if (element.getAttribute('data-id') === target) {
-                element.classList.add('focus')
-            }
-        })
-        focusedElement.classList.remove('focus')
-    }
-}
+addOn.forEach(addon => {
+    addon.addEventListener('click', (e) => {
+        addon.classList.toggle('selected')
+        addon.children[0].classList.toggle('checked')
+    })
+})
 
 class setData {
     info() {
@@ -141,6 +205,32 @@ class setData {
         data.plain.selection = selectedElement.getAttribute('id')
         data.plain.type = check.checked ? 'yearly' : 'monthly'
 
+        console.log(data.plain.type)
+
+        setDataAddons(data.plain.type)
+
+        return {
+            error: false
+        }
+    }
+
+    addons() {
+        const addonsSelected = document.querySelectorAll('article.add-on.selected')
+
+        if (addonsSelected.length <= 0) {
+            return {
+                error: false
+            }
+        }
+
+        data.addons = []
+
+        addonsSelected.forEach(selected => {
+            data.addons.push(selected.getAttribute('id'))
+        })
+
+        summarySetData()
+
         return {
             error: false
         }
@@ -165,6 +255,11 @@ btn.forEach(element => {
                 case 'plain':
                     const plain = sets.plain()
                     err = plain.error
+                break;
+
+                case 'add-ons':
+                    const addon = sets.addons()
+                    err = addon.error
                 break;
                 
                 case null:

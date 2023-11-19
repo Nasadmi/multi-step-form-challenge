@@ -43,9 +43,9 @@
       </ul>
     </nav>
     <section id="info" class="focus">
+      <h2>Personal info</h2>
+      <p>Please provide your name, email address, and phone number.</p>
       <div class="content-section ">
-        <h2>Personal info</h2>
-        <p>Please provide your name, email address, and phone number.</p>
         <label for="name">
           <h4>
             Name
@@ -125,16 +125,75 @@
       </div>
     </section>
     <section id="add-ons">
-      Add-Ons
+      <h2>Pick add-ons</h2>
+      <p>Add-ons help enhance your gaming experience.</p>
+      <article class="add-on" id="online_service">
+        <span class="check-add-on">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="9" viewBox="0 0 12 9">
+            <path fill="none" stroke="#FFF" stroke-width="2" d="m1 4 3.433 3.433L10.866 1"/>
+          </svg>
+        </span>
+        <div class="content-add-on">
+          <h4>Online service</h4>
+          <p>Access to multiplayer games</p>
+        </div>
+        <span class="price-add-on"></span>
+      </article>
+      <article class="add-on" id="larger_storage">
+        <span class="check-add-on">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="9" viewBox="0 0 12 9">
+            <path fill="none" stroke="#FFF" stroke-width="2" d="m1 4 3.433 3.433L10.866 1"/>
+          </svg>
+        </span>
+        <div class="content-add-on">
+          <h4>Larger storage</h4>
+          <p>Extra 1TB of cloud save</p>
+        </div>
+        <span class="price-add-on"></span>
+      </article>
+      <article class="add-on" id="customizable_profile">
+        <span class="check-add-on">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="9" viewBox="0 0 12 9">
+            <path fill="none" stroke="#FFF" stroke-width="2" d="m1 4 3.433 3.433L10.866 1"/>
+          </svg>
+        </span>
+        <div class="content-add-on">
+          <h4>Customizable profile</h4>
+          <p>Custom theme on your profile</p>
+        </div>
+        <span class="price-add-on"></span>
+      </article>
       <div class="buttons">
         <a href="#plain" class="btn-change-section back">Go Back</a>
-        <a href="#summary" class="btn-change-section next" data-type="summary">Next</a>
+        <a href="#summary" class="btn-change-section next" data-type="add-ons">Next</a>
       </div>
     </section>
     <section id="summary">
-      Summary
+      <h2>Finishing up</h2>
+      <p>Double-check everything looks OK before confirming.</p>
+      <article class="summary-prices">
+        <div class="content-article">
+          <div class="index-prices">
+            <div class="text">
+              <h4 class="selection-plain"></h4>
+              <p>Change</p>
+            </div>
+            <span class="price"></span>
+          </div>
+          <div class="others-prices">
+            
+          </div>
+        </div>
+        <div class="total">
+          <div class="extra-prices">
+            <span class="text-extras"></span>
+            <span class="price-total"></span>
+          </div>
+        </div>
+      </article>
+
       <div class="buttons">
-        <a href="#add-ons" class="btn-change-section back" data-type="add-ons">Go Back</a>
+        <a href="#add-ons" class="btn-change-section back">Go Back</a>
       </div>
     </section>
   </main>
