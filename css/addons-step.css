@@ -1,0 +1,52 @@
+/* ADD-ONS STEP */
+
+.content section#add-ons .add-on {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+  padding: 10px;
+  border: 0.5px solid var(--purplish-blue);
+  border-radius: 6px;
+  transition: all 250ms ease-in-out;
+}
+
+.content section#add-ons .add-on.selected {
+  background-color: var(--light-blue);
+}
+
+.content section#add-ons .add-on .check-add-on {
+  display: flex;
+  align-items: center;
+  padding: 4px 3px;
+  border-radius: 5px;
+  border: 0.5px solid var(--cool-gray);
+  transition: all 250ms ease-in-out;
+}
+
+.content section#add-ons .add-on .check-add-on.checked {
+  background-color: var(--purplish-blue);
+  border: 0.5px solid transparent;
+}
+
+.content section#add-ons .add-on .content-add-on {
+  flex: 4;
+  margin-left: 20px;
+  line-height: 16px;
+}
+
+.content section#add-ons .add-on .content-add-on h4 {
+  color: var(--marine-blue);
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.content section#add-ons .add-on .content-add-on p {
+  color: var(--cool-gray);
+  font-size: 12px;
+}
+
+.content section#add-ons .add-on .price-add-on {
+  font-size: 14px;
+  color: var(--purplish-blue);
+}

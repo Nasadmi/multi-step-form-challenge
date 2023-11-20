@@ -1,0 +1,28 @@
+/* PERSONAL INFO STEP */
+
+.content section#info label h4 {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: 400;
+  color: var(--marine-blue);
+  display: flex;
+  justify-content: space-between;
+}
+
+.content section#info label input {
+  font-size: 16px;
+  font-family: "Ubuntu", sans-serif;
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: 0.5px solid var(--cool-gray);
+  width: 450px;
+  appearance: none;
+  outline: none;
+  transition: all 250ms ease;
+  font-weight: 500;
+  color: var(--marine-blue);
+}
+
+.content section#info label input:focus {
+  border: 0.5px solid var(--purplish-blue);
+}

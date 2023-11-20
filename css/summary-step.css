@@ -1,0 +1,75 @@
+/* SUMMARY STEP */
+
+.content section#summary .summary-prices {
+  width: 90%;
+  margin: 40px auto 0;
+  background-color: var(--magnolia);
+  padding: 15px;
+  border-radius: 6px;
+  background-size: cover;
+}
+
+.content section#summary .summary-prices .index-prices {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: var(--light-gray) solid 1px;
+}
+
+.content section#summary .text-extras {
+  color: var(--cool-gray);
+  font-size: 14px;
+}
+
+.content section#summary .summary-prices .index-prices .text h4 {
+  text-transform: capitalize;
+  color: var(--marine-blue);
+  margin-bottom: 2px;
+}
+
+.content section#summary .summary-prices .index-prices .text a {
+  color: var(--cool-gray);
+  font-size: 14px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.content section#summary .summary-prices .index-prices .price {
+  color: var(--marine-blue);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.content section#summary .summary-prices .others-prices .other-price {
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.content
+  section#summary
+  .summary-prices
+  .others-prices
+  .other-price
+  .price-extras {
+  font-size: 14px;
+  color: var(--purplish-blue);
+}
+
+.content section#summary .total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  width: 85%;
+  margin: auto;
+}
+
+.content section#summary .total .price-total {
+  color: var(--purplish-blue);
+  font-weight: 700;
+  margin-bottom: 17px;
+}

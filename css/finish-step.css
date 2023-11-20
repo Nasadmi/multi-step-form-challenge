@@ -1,0 +1,13 @@
+/* FINISH STEP */
+
+.content section#finish.focus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content section#finish h2 {
+  font-size: 40px;
+  margin: 20px 0 5px;
+}
