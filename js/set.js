@@ -88,6 +88,8 @@ export class setData {
         const addonsSelected = document.querySelectorAll('article.add-on.selected')
 
         if (addonsSelected.length <= 0) {
+            summarySetData()
+            
             return {
                 error: false
             }

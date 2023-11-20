@@ -73,6 +73,15 @@ export const summarySetData = () => {
 
     summaryElementsSetData.total.children[0].innerText = `Total (per ${data.plain.type === 'yearly' ? 'year' : 'month'})`
 
+    if (data.addons.length <= 0) {
+        summaryElementsSetData.total.children[1].innerText = 
+        `
+            $${(selectionPrice * multiply)}/${textTypeTime}
+        `
+        
+        return
+    }
+
     data.addons.forEach(addon => {
         summaryElementsSetData.otherPricesContainer.innerHTML += 
         `
