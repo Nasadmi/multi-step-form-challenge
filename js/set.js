@@ -87,6 +87,8 @@ export class setData {
     addons() {
         const addonsSelected = document.querySelectorAll('article.add-on.selected')
 
+        data.addons = []
+
         if (addonsSelected.length <= 0) {
             summarySetData()
             
@@ -94,8 +96,6 @@ export class setData {
                 error: false
             }
         }
-
-        data.addons = []
 
         addonsSelected.forEach(selected => {
             data.addons.push(selected.getAttribute('id'))
